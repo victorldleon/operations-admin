@@ -11,9 +11,11 @@ function App() {
     <div>
       <Header />
       <Switch>
-        <Route path="/" component={UsersPage} exact/>
-        <Route path="/clients" component={ClientsPage} />
-        <Route path="/logs" component={LogsPage} />
+        <div className="container">
+          <Route path="/" component={UsersPage} exact/>
+          <Route path="/clients" component={ClientsPage} />
+          <Route path="/logs" component={LogsPage} />
+        </div>
       </Switch>
     </div>
   );

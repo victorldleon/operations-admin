@@ -1,0 +1,76 @@
+.userCard {
+    align-items: center;
+    background-color: #eee;
+    border-radius: 8px;
+    margin-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+}
+
+.userCard .left-content {
+    align-items: center;
+    display: flex;
+}
+
+
+.userCard .left-content .user-image {
+    background-color: #333;
+    border-radius: 50%;
+    display: block;
+    height: 48px;
+    min-width: 48px;
+    margin-right: 10px;
+    width: 48px;
+}
+
+.userCard .left-content .name {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.userCard .left-content .email {
+    font-size: 1rem;
+}
+
+
+.right-content {
+    align-items: center;
+    display: flex;
+}
+
+.userCard .right-content .english-level {
+    font-size: 1rem;
+    margin-right: 30px;
+}
+.userCard .right-content .english-level span {
+    background: #000;
+    border-radius: 4px;
+    padding: 2px 8px;
+    color: #eee;
+}
+
+
+.userCard .right-content .skills-container {
+    align-items: center;
+    display: flex;
+    margin-right: 20px;
+}
+
+.userCard .right-content .skills-container .skill {
+    border: solid 1px rgb(10, 124, 155);
+    border-radius: 4px;
+    color: rgb(10, 124, 155);
+    font-size: 1rem;
+    margin-right: 10px;
+    padding: 2px 8px;
+}
+
+.userCard .right-content .cv-link {
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(10, 124, 155);
+    padding: 8px 16px;
+}
