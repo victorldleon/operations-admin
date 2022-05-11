@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
+import './Header.css';
 function Header() {
     return (
         <header>
-            <Link to="/">Op Admin</Link>
+            <Link className='logo' to="/">Op Admin</Link>
             <nav>
                 <ul>
                     <li><Link to="/">Home</Link></li>
@@ -13,3 +14,4 @@ function Header() {
         </header>
     );
 }
+export default Header;
