@@ -26,10 +26,10 @@
 
 .clientCard .left-content .name {
     font-size: 1rem;
-    margin-right: 10px;
+    margin-right: 30px;
 }
 
-.clientCard .left-content .email {
+.clientCard .left-content .owner {
     font-size: 1rem;
 }
 
@@ -39,11 +39,11 @@
     display: flex;
 }
 
-.clientCard .right-content .english-level {
+.clientCard .right-content .detail {
     font-size: 1rem;
-    margin-right: 30px;
+    margin-right: 20px;
 }
-.clientCard .right-content .english-level span {
+.clientCard .right-content .detail span {
     background: #000;
     border-radius: 4px;
     padding: 2px 8px;
