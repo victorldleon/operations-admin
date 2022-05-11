@@ -11,9 +11,19 @@ a {
 header {
     align-items: center;
     display: flex;
-    background-color: #efefef;
-    justify-content: flex-start;
+    background-color: #efefef;;
+    justify-content: space-between;
     padding: 10px 60px;
+}
+
+header .col-left {
+    align-items: center;
+    display: flex;
+}
+
+header .col-right {
+    align-items: center;
+    display: flex;
 }
 
 header nav ul{
