@@ -63,6 +63,7 @@
     color: rgb(10, 124, 155);
     font-size: 1rem;
     margin-right: 10px;
+    text-transform: capitalize;
     padding: 2px 8px;
 }
 
