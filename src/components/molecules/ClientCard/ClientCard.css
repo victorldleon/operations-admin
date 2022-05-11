@@ -1,0 +1,76 @@
+.clientCard {
+    align-items: center;
+    background-color: #eee;
+    border-radius: 8px;
+    margin-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+}
+
+.clientCard .left-content {
+    align-items: center;
+    display: flex;
+}
+
+
+.clientCard .left-content .client-image {
+    background-color: #333;
+    border-radius: 50%;
+    display: block;
+    height: 48px;
+    min-width: 48px;
+    margin-right: 10px;
+    width: 48px;
+}
+
+.clientCard .left-content .name {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.clientCard .left-content .email {
+    font-size: 1rem;
+}
+
+
+.right-content {
+    align-items: center;
+    display: flex;
+}
+
+.clientCard .right-content .english-level {
+    font-size: 1rem;
+    margin-right: 30px;
+}
+.clientCard .right-content .english-level span {
+    background: #000;
+    border-radius: 4px;
+    padding: 2px 8px;
+    color: #eee;
+}
+
+
+.clientCard .right-content .skills-container {
+    align-items: center;
+    display: flex;
+    margin-right: 20px;
+}
+
+.clientCard .right-content .skills-container .skill {
+    border: solid 1px rgb(10, 124, 155);
+    border-radius: 4px;
+    color: rgb(10, 124, 155);
+    font-size: 1rem;
+    margin-right: 10px;
+    padding: 2px 8px;
+}
+
+.clientCard .right-content .cv-link {
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(10, 124, 155);
+    padding: 8px 16px;
+}

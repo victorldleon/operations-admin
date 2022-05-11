@@ -13,14 +13,14 @@ const UserCard = () => {
             </div>
             <div className="right-content">
                 <p className="english-level">
-                    INGLES: <span>C1</span>
+                    Ingles: <span>C1</span>
                 </p>
                 <div className="skills-container">
                     <div className="skill">react</div>
                     <div className="skill">angular</div>
                     <div className="skill">vuejs</div>
                 </div>
-                <a href="#" className="cv-link">CV</a>
+                <a href="../../../logo.svg" className="cv-link" download>CV</a>
             </div>
         </div>
     );
