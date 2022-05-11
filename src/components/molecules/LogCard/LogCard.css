@@ -1,0 +1,76 @@
+.LogCard {
+    align-items: center;
+    background-color: #eee;
+    border-radius: 8px;
+    margin-bottom: 3px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+}
+
+.LogCard .left-content {
+    align-items: center;
+    display: flex;
+}
+
+
+.LogCard .left-content .client-image {
+    background-color: #333;
+    border-radius: 50%;
+    display: block;
+    height: 48px;
+    min-width: 48px;
+    margin-right: 10px;
+    width: 48px;
+}
+
+.LogCard .left-content .name {
+    font-size: 1rem;
+    margin-right: 30px;
+}
+
+.LogCard .left-content .client {
+    font-size: 1rem;
+}
+
+
+.right-content {
+    align-items: center;
+    display: flex;
+}
+
+.LogCard .right-content .detail {
+    font-size: 1rem;
+    margin-right: 20px;
+}
+.LogCard .right-content .detail span {
+    background: #000;
+    border-radius: 4px;
+    padding: 2px 8px;
+    color: #eee;
+}
+
+
+.LogCard .right-content .skills-container {
+    align-items: center;
+    display: flex;
+    margin-right: 20px;
+}
+
+.LogCard .right-content .skills-container .skill {
+    border: solid 1px rgb(10, 124, 155);
+    border-radius: 4px;
+    color: rgb(10, 124, 155);
+    font-size: 1rem;
+    margin-right: 10px;
+    padding: 2px 8px;
+}
+
+.LogCard .right-content .cv-link {
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(10, 124, 155);
+    padding: 8px 16px;
+}
