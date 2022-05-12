@@ -5,7 +5,9 @@ const NewUser = () => {
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const [passwordConfirmation, setPasswordConfirmation] = React.useState('');
+    const [skills, setSkills] = React.useState('');
     const [role, setRole] = React.useState('');
+    const [file, setFile] = React.useState('');
     const [isLoading, setIsLoading] = React.useState(false);
     const [error, setError] = React.useState(null);
     const [success, setSuccess] = React.useState(null);
@@ -47,25 +49,58 @@ const NewUser = () => {
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="name">Name</label>
-                    <input type="text" className="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name" />
+                    <input 
+                        type="text" 
+                        className="form-control" 
+                        placeholder="Enter name" 
+                        id="name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                    />
                     <small id="nameHelp" className="form-text text-muted">We'll never share your name with anyone else.</small>
                 </div>
                 <div className="form-group">
                     <label htmlFor="email">Email address</label>
-                    <input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" />
+                    <input 
+                        type="email" 
+                        className="form-control" 
+                        id="email"
+                        placeholder="Enter email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
                     <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div className="form-group">
                     <label htmlFor="password">Password</label>
-                    <input type="password" className="form-control" id="password" placeholder="Password" />
+                    <input 
+                        type="password" 
+                        className="form-control" 
+                        id="password" 
+                        placeholder="Password" 
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
                 </div>
                 <div className="form-group">
                     <label htmlFor="password">Confirm Password</label>
-                    <input type="password" className="form-control" id="password" placeholder="Password" />
+                    <input 
+                        type="password"     
+                        className="form-control" 
+                        id="password" 
+                        placeholder="Password" 
+                        value={passwordConfirmation}
+                        onChange={(e) => setPasswordConfirmation(e.target.value)}
+                    />
                 </div>
                 <div className="form-group">
                     <label htmlFor="englishLevel">English Level</label>
-                    <select className="form-control" id="englishLevel">
+                    <select 
+                        className="form-control" 
+                        id="englishLevel"
+                        value={role}
+                        onChange={(e) => setRole(e.target.value)}
+                    >
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -75,11 +110,25 @@ const NewUser = () => {
                 </div>
                 <div className="form-group">
                     <label htmlFor="skills">Skills</label>
-                    <input type="text" className="form-control" id="skills" placeholder="Skills" />
+                    <input 
+                        type="text" 
+                        className="form-control" 
+                        id="skills" 
+                        placeholder="Skills"
+                        value={skills}
+                        onChange={(e) => setSkills(e.target.value)}
+                    />
                 </div>
                 <div className="form-group">
                     <label htmlFor="cv">CV</label>
-                    <input type="file" className="form-control" id="cv" placeholder="CV" />
+                    <input 
+                        type="file" 
+                        className="form-control" 
+                        id="cv" 
+                        placeholder="CV" 
+                        value={file}
+                        onChange={(e) => setFile(e.target.value)}
+                    />
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>
