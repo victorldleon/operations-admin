@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const NewUser = () => { 
-    const [name, setName] = React.useState('');
-    const [email, setEmail] = React.useState('');
-    const [password, setPassword] = React.useState('');
-    const [passwordConfirmation, setPasswordConfirmation] = React.useState('');
-    const [skills, setSkills] = React.useState('');
-    const [role, setRole] = React.useState('');
-    const [file, setFile] = React.useState('');
-    const [isLoading, setIsLoading] = React.useState(false);
-    const [error, setError] = React.useState(null);
-    const [success, setSuccess] = React.useState(null);
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [passwordConfirmation, setPasswordConfirmation] = useState('');
+    const [skills, setSkills] = useState('');
+    const [role, setRole] = useState('');
+    const [file, setFile] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
+    const [success, setSuccess] = useState(null);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
