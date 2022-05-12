@@ -13,7 +13,9 @@ function App() {
       <Switch>
         <div className="container">
           <Route path="/" component={UsersPage} exact/>
+          <Route path="/users/new" component={ClientsPage} />
           <Route path="/clients" component={ClientsPage} />
+          <Route path="/clients/new" component={ClientsPage} />
           <Route path="/logs" component={LogsPage} />
         </div>
       </Switch>
