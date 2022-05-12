@@ -28,7 +28,9 @@ const NewUser = () => {
                     email,
                     password,
                     passwordConfirmation,
-                    role
+                    role,
+                    skills,
+                    cvUrl
                 })
             });
             const data = await response.json();
