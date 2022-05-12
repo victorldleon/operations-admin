@@ -7,7 +7,7 @@ const NewUser = () => {
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
     const [skills, setSkills] = useState('');
     const [role, setRole] = useState('');
-    const [file, setFile] = useState('');
+    const [cvUrl, setCvUrl] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(null);
@@ -120,14 +120,14 @@ const NewUser = () => {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="cv">CV</label>
-                    <input 
-                        type="file" 
-                        className="form-control" 
-                        id="cv" 
-                        placeholder="CV" 
-                        value={file}
-                        onChange={(e) => setFile(e.target.value)}
+                    <label htmlFor="cvUrl">CV URL</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="cvUrl"
+                        placeholder="CV URL"
+                        value={cvUrl}
+                        onChange={(e) => setCvUrl(e.target.value)}
                     />
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
