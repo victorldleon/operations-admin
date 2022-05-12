@@ -18,7 +18,7 @@ const NewUser = () => {
         setError(null);
         setSuccess(null);
         try {
-            const response = await fetch('/api/users', {
+            const response = await fetch('https://react-hooks-8fca3-default-rtdb.firebaseio.com/users.json', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
