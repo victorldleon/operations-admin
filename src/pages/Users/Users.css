@@ -1,0 +1,21 @@
+.sub-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+.sub-header .row  {
+    align-items: center;
+    display: flex;
+}
+.sub-header .row .icon {
+    align-items: center;
+    background-color: rgb(10, 124, 155);
+    border-radius: 50%;
+    justify-content: center;
+    height: 24px;
+    display: flex;
+    margin-right: 8px;
+    padding: 6px;
+    width: 24px;
+}
