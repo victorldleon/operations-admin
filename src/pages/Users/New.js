@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import './New.css'
 
 const NewUser = () => { 
@@ -12,6 +13,7 @@ const NewUser = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(null);
+    const history = useHistory();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -56,6 +58,7 @@ const NewUser = () => {
         setSkills('');
         setEnglishLevel('');
         setCvUrl('');
+        history.push('/');
     };
 
     const loading = isLoading ? <div className='loading'><p>Loading...</p></div> : null;

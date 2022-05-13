@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import './New.css'
 
 const NewClient = () => { 
@@ -7,6 +8,23 @@ const NewClient = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     const [success, setSuccess] = useState(null);
+    const history = useHistory();
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        fetch('https://react-hooks-8fca3-default-rtdb.firebaseio.com/users.json')
+            .then(response => response.json())
+            .then(data => {
+                const users = Object.keys(data).map(key => ({
+                    ...data[key],
+                    id: key
+                }));
+                setUsers(users);
+            })
+            .catch(error => {
+                setError(error);
+            });
+    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -40,6 +58,7 @@ const NewClient = () => {
 
     const handleSuccess = () => {
         setName('');
+        history.push('/clients');
     };
 
     const loading = isLoading ? <div className='loading'><p>Loading...</p></div> : null;
@@ -73,8 +92,9 @@ const NewClient = () => {
                         onChange={(e) => setResponsible(e.target.value)}
                     >
                         <option value="">Select responsible</option>
-                        <option value="John Doe">John Doe</option>
-                        <option value="Jane Doe">Jane Doe</option>
+                        {users.map(user => (
+                            <option key={user.id} value={user.name}>{user.name}</option>
+                        ))}
                     </select>   
                 </div>   
                 <button type="submit" className="btn btn-primary">Submit</button>
