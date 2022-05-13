@@ -14,13 +14,14 @@ const NewClient = () => {
         setError(null);
         setSuccess(null);
         try {
-            const response = await fetch('https://react-hooks-8fca3-default-rtdb.firebaseio.com/Clients.json', {
+            const response = await fetch('https://react-hooks-8fca3-default-rtdb.firebaseio.com/clients.json', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
                     name,
+                    responsible
                 })
             });
             const data = await response.json();

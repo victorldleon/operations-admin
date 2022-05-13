@@ -1,10 +1,31 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import ClientCard from '../../molecules/ClientCard/ClientCard';
 const ClientsList = () => {
+    const [clients, setClients] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null);
+    const [success, setSuccess] = useState(null);
+
+    useEffect(() => {
+        fetch('https://react-hooks-8fca3-default-rtdb.firebaseio.com/clients.json')
+            .then(response => response.json())
+            .then(data => {
+                const clients = Object.keys(data).map(key => ({
+                    ...data[key],
+                    id: key
+                }));
+                setClients(clients);
+            })
+            .catch(error => {
+                setError(error);
+            });
+    }, []);
+
     return (
         <div>
-            <ClientCard />
-            <ClientCard />
+            {clients.map(client => (
+                <ClientCard key={client.id} client={client} />
+            ))}
         </div>
     );
 };
