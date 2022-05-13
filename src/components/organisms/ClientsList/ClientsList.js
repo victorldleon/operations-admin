@@ -2,9 +2,6 @@ import React, {useState, useEffect} from 'react';
 import ClientCard from '../../molecules/ClientCard/ClientCard';
 const ClientsList = () => {
     const [clients, setClients] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(null);
-    const [success, setSuccess] = useState(null);
 
     useEffect(() => {
         fetch('https://react-hooks-8fca3-default-rtdb.firebaseio.com/clients.json')
@@ -16,9 +13,6 @@ const ClientsList = () => {
                 }));
                 setClients(clients);
             })
-            .catch(error => {
-                setError(error);
-            });
     }, []);
 
     return (
