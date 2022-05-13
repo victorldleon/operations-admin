@@ -7,7 +7,7 @@ const NewUser = () => {
     const [password, setPassword] = useState('');
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
     const [skills, setSkills] = useState('');
-    const [role, setRole] = useState('');
+    const [englishLevel, setEnglishLevel] = useState('');
     const [cvUrl, setCvUrl] = useState('');
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
@@ -29,7 +29,7 @@ const NewUser = () => {
                     email,
                     password,
                     passwordConfirmation,
-                    role,
+                    englishLevel,
                     skills,
                     cvUrl
                 })
@@ -54,7 +54,7 @@ const NewUser = () => {
         setPassword('');
         setPasswordConfirmation('');
         setSkills('');
-        setRole('');
+        setEnglishLevel('');
         setCvUrl('');
     };
 
@@ -119,8 +119,8 @@ const NewUser = () => {
                     <select 
                         className="form-control" 
                         id="englishLevel"
-                        value={role}
-                        onChange={(e) => setRole(e.target.value)}
+                        value={englishLevel}
+                        onChange={(e) => setEnglishLevel(e.target.value)}
                     >
                         <option>1</option>
                         <option>2</option>

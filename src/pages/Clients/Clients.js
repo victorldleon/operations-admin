@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import ClientCard from '../../components/molecules/ClientCard/ClientCard';
+import ClientsList from '../../components/organisms/ClientsList/ClientsList';
 
 const ClientsPage = () => {
     return (
@@ -14,8 +14,7 @@ const ClientsPage = () => {
                 <p>New Client</p>
                 </Link>
             </div>
-            <ClientCard />
-            <ClientCard />
+            <ClientsList />
         </div>
     );
 }
