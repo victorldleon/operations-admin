@@ -39,11 +39,22 @@ const NewUser = () => {
                 setError(data.error);
             } else {
                 setSuccess(data.message);
+                handleSuccess();
             }
         } catch (error) {
             setError(error);
         }
         setIsLoading(false);
+    };
+
+    const handleSuccess = () => {
+        setName('');
+        setEmail('');
+        setPassword('');
+        setPasswordConfirmation('');
+        setSkills('');
+        setRole('');
+        setCvUrl('');
     };
     
     return (
