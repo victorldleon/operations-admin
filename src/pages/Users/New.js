@@ -37,6 +37,7 @@ const NewUser = () => {
             const data = await response.json();
             if (data.error) {
                 setError(data.error);
+                console.log(error);
             } else {
                 setSuccess(data.message);
                 handleSuccess();
@@ -56,10 +57,16 @@ const NewUser = () => {
         setRole('');
         setCvUrl('');
     };
+
+    const loading = isLoading ? <div className='loading'><p>Loading...</p></div> : null;
+    const errorMessage = error ? <div className='error'><p>{error}</p></div> : null;
+    const successMessage = success ? <div className='success'><p>{success}</p></div> : null;
     
     return (
         <div>
             <h1>New User</h1>
+            {successMessage}
+            {errorMessage}
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="name">Name</label>
@@ -146,6 +153,7 @@ const NewUser = () => {
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>
+            {loading}
         </div>
     )
 }
