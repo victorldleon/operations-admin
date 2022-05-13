@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import UsersList from "../../components/organisms/UsersList/UserList";
 import './Users.css';
-function UsersPage() {
+const UsersPage = () => {
     return (
         <div>
             <div className="sub-header">

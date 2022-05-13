@@ -16,7 +16,7 @@ function App() {
         <div className="container">
           <Route path="/" component={UsersPage} exact/>
           <Route path="/users/new" component={NewUser} />
-          <Route path="/clients" component={ClientsPage} />
+          <Route path="/clients" component={ClientsPage} exact/>
           <Route path="/clients/new" component={NewClient} />
           <Route path="/logs" component={LogsPage} />
         </div>
